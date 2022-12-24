@@ -37,3 +37,7 @@ group by MANAGER_ID
 having count(*) > 5
 order by 2;
 
+select * from EMPLOYEES
+where SALARY =  (select max(SALARY) from (SELECT distinct SALARY from EMPLOYEES order by SALARY)
+                    where ROWNUM < 4);
+
