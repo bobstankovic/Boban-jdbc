@@ -63,4 +63,6 @@ from EMPLOYEES workers join EMPLOYEES managers
 group by (managers.FIRST_NAME || ' ' || managers.LAST_NAME)
 order by 2 desc ;
 
+select * from DEPARTMENTS where MANAGER_ID is not null;
+
 
